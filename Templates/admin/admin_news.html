@@ -1,0 +1,109 @@
+{% extends 'admin/admin_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+<style>
+
+    .title {
+        width: 25%;
+    }
+
+</style>
+
+
+
+<section class="body">
+    <!-- start: header -->
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>News</h2>
+            <div class="right-wrapper text-end">
+
+                <a class="sidebar-right-toggle" ><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </header>
+
+					<!-- start: page -->
+					<div class="row" >
+						<div class="col">
+							<div class="card card-modern">
+								<div class="card-body"  >
+									<div class="datatables-header-footer-wrapper" ">
+										<div class="datatable-header">
+											<div class="row align-items-center mb-3">
+
+												<div class="col-4 col-lg-auto ps-lg-1 mb-3 mb-lg-0">
+
+												</div>
+												<div class="col-12 col-lg-auto ps-lg-1">
+													<div class="search search-style-1 search-style-1-lg mx-lg-auto">
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+                                        <div style="width:100%;overflow-x: auto;">
+                                            <table class="table table-ecommerce-simple table-borderless table-striped mb-0" id="datatable-ecommerce-list" style="width: 100%;">
+                                            
+
+
+                                            <tbody>
+                                                <tr>     
+                                                    <td class = "table_data title"><strong>Picture : </strong></td>
+                                                    <td class = "table_data">														
+                                                        {% if news.News_Picture %}
+														<a ><img style="width:fit-content;height:fit-content;" src="{{news.News_Picture.url}}" class="img-fluid" alt="News Image" /></a>
+														{% else %}
+														<a ><img src="{% static 'admin/img/kerala_Flag.jpg' %}" class="img-fluid" alt="Product Short Name" /></a>
+														{% endif %}
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class = "table_data"><strong>Title : </strong></td>
+                                                    <td class = "table_data">{{news.News_title}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class = "table_data"><strong>News : </strong></td>
+                                                    <td class = "table_data">{{news.News_content}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class = "table_data"><strong>Last Updated : </strong></td>
+                                                    <td class = "table_data">{{news.News_date}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        </div>
+                                        <hr class="solid mt-5 opacity-4">
+                                        <div class="datatable-footer">
+                                            <div class="row align-items-center justify-content-between mt-3">
+
+                                                <div class="col-lg-auto text-center order-3 order-lg-2">
+                                                    <div class="results-info-wrapper"></div>
+                                                </div>
+                                                <div class="col-lg-auto order-2 order-lg-3 mb-3 mb-lg-0">
+                                                    <div class="pagination-wrapper"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: page -->
+				</section>
+			</div>
+
+
+
+
+
+
+{% endblock %}

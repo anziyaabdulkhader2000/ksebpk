@@ -1,0 +1,217 @@
+
+{% extends 'common_head.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+        <!-- banner-section -->
+        <section class="banner-section p_relative">
+            <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
+                <div class="slide-item p_relative">
+                    <div class="pattern-layer">
+                        <div class="pattern-1" style="background-image: url(static/assets/images/shape/shape-2.png);"></div>
+                        <div class="pattern-2" style="background-image: url(static/assets/images/shape/shape-3.png);"></div>
+
+                    </div>
+                    <div class="auto-container">
+                        <div class="banner-content p_relative d_block">
+                            <div class="content-box p_relative d_block z_5">
+                                <!-- <h3>Happy Retirement</h3> -->
+                                <h2 class="p_relative d_block fs_70 lh_80 fw_bold">കെ.എസ്.ഇ.ബി പെൻഷനേഴ്സ് കൂട്ടായ്മ</h2>
+                                <p class="p_relative d_block fs_18">പെൻഷൻ സുരക്ഷയ്ക്കും സാമൂഹിക ക്ഷേമത്തിനുമായി ഒരു സുതാര്യ വേദി</p>
+                                <div class="btn-box">
+                                    <a href="{% url 'user_login' %}" class="theme-btn btn-one">LOGIN</a>
+                                </div>
+
+                            </div>
+                            <div class="image-box">
+                                <div class="shape">
+                                    <div class="shape-1" style="background-image: url(static/assets/images/shape/shape-1.png);"></div>
+                                    
+                                </div>
+                                <figure style="margin-left:20%" class="image"><img  src="{% static 'assets/images/icons/logo(2).png' %}" alt=""></figure>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner-section end -->
+     
+
+        <!-- feature-section -->
+        <!-- <section class="feature-section p_relative">
+            <div class="auto-container">
+                <div class="inner-container p_relative d_block">
+                    <div class="shape-layer" style="background-image: url(static/assets/images/shape/shape-17.png);"></div>
+                    <div class="title-box p_relative d_block centred">
+                        <h1>പുതിയ വാർത്തകൾ</h1> 
+                        <!-- <p>സംഘടനാ ചരിത്രത്തിൽ പുതിയ അദ്ധ്യായം എഴുതി ചേർത്തുകൊണ്ട് കോവിഡ് കാലത്തെ എല്ലാ പരിമിതികളെയും അവഗണിച്ച് ആയിരങ്ങൾ സ്വമേധയാ അംഗങ്ങളാകുന്ന അഭൂതപൂർവ്വമായ കാഴ്ചക്കാണ് 2022 ന്റെ ആദ്യപാദം സാക്ഷ്യംവഹിച്ചത്. </p> -->
+                    </div>
+                    <!-- <div class="row clearfix">
+                        <div class="col-lg-4 col-md-8 col-sm-16 feature-block">
+                            <div class="feature-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_relative d_block"><figure style="width:100%" class="image"><img  src="{% static 'assets/images/b.jpg' %}" alt=""></figure></div>
+                                    <h3>സംഘടന രൂപം കൊള്ളുന്നു</h3>
+                                    <p>  "കെ എസ് ഇ ബി ലിമിറ്റഡിലെ" പെൻഷൻ സുരക്ഷയ്ക്കും അംഗങ്ങളുടെ ചൂഷണ രഹിതമായ ക്ഷേമത്തിനുമായി രൂപീകരിക്കുന്ന സംഘടന സൂചിന്തിതമായ തീരുമാനം:
+
+                                         ജാതി, മതം, രാജകീയം, ഉദ്യോഗത്തിലുണ്ടായിരുന്ന പദവി, കാറ്റഗറി, സംഘടനകൾ എന്നിവ അതീതമായിരിക്കണം.,
+                                         രാഷ്ട്രീയ സംഘടനകൾക്കോ അതിൻമുക്തമായ ബന്ധമോ അതീതമാക്കണം.,
+                                         അംഗങ്ങളുടെ സമൃദ്ധിയോ സാമ്പത്തിക ചൂഷണവോ അത്യാവശ്യമില്ലാത്തതോ ആസ്തി സമ്പാദനമോ ഇല്ല.,
+                                         ഭാരവാഹിത്വത്തിന് പരിധി കൂടുതൽ ഉണ്ടാകണം.,
+                                         സാമ്പത്തിക കാര്യങ്ങളിൽ സുതാര്യതയും കൃത്യതയും അവയെ നിയമാനുസരിച്ച് പരിപാലിക്കണം.,
+                                        വ്യാപകമായ ചര്ച്ചകൾ പ്രകടമാക്കി ഒരു നിയമാവലിക്ക് അന്തിമരൂപം കൊടുക്കണം.,
+                                         2021 ഒക്ടോബർ 8-ന് യോഗം നടത്തിയാണ്, അതിനാൽ സംഘടനയുടെ താത്കാലിക ഭരണ സമിതിയെ തിരഞ്ഞെടു</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-8 col-sm-16 feature-block">
+                            <div class="feature-block-one wow fadeInUp" data-wow-delay="200ms" data-wow-duration="150ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_relative d_block"><figure style="width:100%" class="image"><img  src="{% static 'assets/images/a.jpg' %}" alt=""></figure></div>
+                                    <h3>പ്രവർത്തനോദ്ഘാടനവും പ്രഥമ ഭരണ സമിതിയും</h3>
+                                    <p>2021 നവംബർ 1ന്, കേരള പ്പിറവി ദിനത്തിൽ, എറണാകുളം പ്രസ്സ് ക്ലബ്ബ് ഹാളിൽ, പ്രതിനിധികളുടെ പ്രൗഢോജ്ജ്വല സദസ്സിൽ, കേരളത്തിലെ എല്ലാ ജില്ലകളിൽ നിന്നുമുള്ള പ്രതിനിധികളുടെ സമാധാനമായ സംഘടന പ്രവർത്തനങ്ങൾ ആരംഭിച്ചു. കെ.എസ്.ഇ ബി പെൻഷനേഴ്സ് കൂട്ടായ്മയുടെ ഔദ്യോഗിക പ്രവർത്തനം, മദ്ധ്യമേഖല ചീഫ് എഞ്ചിനീയർ എം.ടെൻസന്റെയും താത്കാലിക ഭരണസമിതിയുടെയും സാന്നിദ്ധ്യത്തിൽ നടത്തി. വ്യാപകമായ ചർച്ചകൾപ്രകടമാക്കി നിയമാവലി പ്രകാരം പതിനഞ്ചു ഭാരവാഹികൾ ഉള്ള 2021-22 വർഷത്തേക്കുള്ള സ്ഥിരം ഭരണസമിതിയെ തിരഞ്ഞെടുത്തു. 2021 നവംബർ 8 ന് ജനറൽ സെക്രട്ടറി സമർപ്പിച്ച അപേക്ഷയിന്മേൽ തീരുമാനങ്ങൾക്കും നടപടികൾക്കും രജിസ്ട്രാർ അംഗീകാരം നൽകിയത്തോടെ നിയമാവലി പ്രകാരമുള്ള ആദ്യ ഭരണസമിതി നിലവിൽ വന്നു.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-8 col-sm-16 feature-block">
+                            <div class="feature-block-one wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_relative d_block"><figure style="width:100%" class="image"><img  src="{% static 'assets/images/c.jpg' %}" alt=""></figure></div>
+                                    <h3> ചരിത്രം രചിച്ച ആദ്യവർഷം</h3>
+                                    <p>2022 പെൻഷനർസ് അസോസിയേഷൻ സമ്മേളനം പുതിയ വികസനങ്ങൾ വ്യക്തമാക്കിയുന്നു. കോവിഡ് കാലത്തെ പരിമിതികളെ അവഗണിച്ച് ആയിരങ്ങൾ സ്വമേധയാ അംഗങ്ങളാകുന്ന അദ്ധ്യായം ചേർത്തുകൊണ്ട് 2022 ന്റെ ആദ്യപാദം സാക്ഷ്യംവഹിച്ചു. മാസ്റ്റർ ട്രസ്റ്റ് രൂപീകരണം അഭിമുഖമാക്കി പെൻഷൻ സുരക്ഷയുമായി ബന്ധപ്പെട്ട വിഷയങ്ങൾ സംഘടനാപരമായി ഏറ്റെടുത്ത് സർക്കാർ-മാനേജ്‌മെന്റ് തലങ്ങളിൽ സജീവമായ ചർച്ചയും സാമൂഹിക ക്ഷേമങ്ങളുടെ കാര്യത്തിലും ആവശ്യങ്ങൾ ഉന്നയിക്കപ്പെട്ടു. പെൻഷൻ സംഘടനകൾക്ക് പ്രാതിനിധ്യം നൽകി മാസ്റ്റർ ട്രസ്റ്റ്‌ പ്രവർത്തനക്ഷമമാക്കണമെന്നും അധിക പെൻഷൻ ബാധ്യതക്ക് ത്രികക്ഷി ക്കരാർ പ്രകാരമുള്ള ഫണ്ട് നിക്ഷേപങ്ങൾ നടത്തണമെന്നും സർക്കാർ അനുവാദം ദീർഘിപ്പിച്ചു കിട്ടുന്നു.</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-one wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div class="inner-box p_relative d_block">
+                                    <div class="icon-box p_relative d_block"><figure style="width:25%" class="image"><img  src="{% static 'assets/images/icons/communication.png' %}" alt=""></figure></div>
+                                    <h3>പുതിയ വാർത്തകൾ</h3>
+                                    <p> സംഘടനാ ചരിത്രത്തിൽ പുതിയ അദ്ധ്യായം എഴുതി ചേർത്തുകൊണ്ട് കോവിഡ് കാലത്തെ എല്ലാ പരിമിതികളെയും അവഗണിച്ച് ആയിരങ്ങൾ സ്വമേധയാ അംഗങ്ങളാകുന്ന അഭൂതപൂർവ്വമായ കാഴ്ചക്കാണ് 2022 ന്റെ ആദ്യപാദം സാക്ഷ്യംവഹിച്ചത്.</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="title-box p_relative d_block centred">
+                            <h1>പുതിയ വാർത്തകൾ</h1> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature-section end -->
+
+         <section id="News" class="news-section p_relative">
+            <div class="auto-container">
+                <div class="three-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+
+                    {% for news in newses %}
+                    <div class="news-block-one">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="{{news.News_Picture.url}}" alt="">
+                            </figure>
+                            <div class="lower-content">
+                                <div class="inner">
+                                    <div class="category"><a style="color:black">{{news.News_title}}</a></div>
+                                    <h3><a>News description</a></h3>
+                                    <ul class="post-info clearfix">
+                                        <li><i class="icon-34"></i>{{news.News_date}}</li>
+                                        <li><i class="icon-35"></i><a href="#">Admin_name</a></li>
+                                    </ul>
+                                    <p>{{ news.News_content|slice:":100" }}...</p>
+                                    <!-- <div class="link"><a href="{% url 'user_news' news.News_id %}">Read more</a></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+
+                </div>
+            </div>
+        </section>
+        <!-- news-section end -->
+
+        <!-- about-section -->
+        <section class="about-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-5 col-md-10 col-sm-10 image-column">
+                        <div class="image_block_one">
+                            <div class="image-box mr_30 pr_130 pb_100">
+                                
+                                <figure><img src="{% static 'assets/images/ab.jpg' %}" alt=""></figure><br>
+                                <figure><img src="{% static 'assets/images/i.jpg' %}" alt=""></figure><br>
+                                <figure><img src="{% static 'assets/images/n.jpg' %}" alt=""></figure><br>
+
+                                <!-- <div class="shape" style="margin-left:40%">
+                                    <div class="text p_absolute r_0 b_0">
+                                        
+                                        <h4>KSEB</h4>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="about" class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_one">
+                            <div class="content-box ml_30">
+                                <div class="shape" style="background-image: url(static/assets/images/shape/shape-1.png);"></div>
+                                <div class="sec-title left p_relative d_block mb_25">
+                                    <span class="sub-title">who we Are?</span>
+                                    <h1><strong><b>കെ. എസ്. ഇ. ബി. പെൻഷനേഴ്സ് കൂട്ടായ്മ </b></strong></h1>
+                                    <h5>(രജി. നമ്പർ: ALP/TC 335/2021)<br>
+                                        "പെൻഷൻ സുരക്ഷയ്ക്കും സാമൂഹിക ക്ഷേമത്തിനുമായി ഒരു സുതാര്യ വേദി".
+                                        </h5>
+                                </div>
+                                <div class="text p_relative d_block">
+                                    <p>കെഎസ് ഇ ബി യിൽ  നിന്നു വിരമിച്ചവരുടെ പെൻഷൻസുരക്ഷ അപകടത്തിലായിട്ടും പ്രതികരിക്കുവാനോ അവരെ പ്രതിനിധീകരിക്കുവാനോ ആരും ഇല്ലെന്ന അനുഭവത്തിൽ നിന്ന് ഒരു വാട്സ് ആപ് ഗ്രൂപ്പ് ആയി തുടക്കം. 2021 ഒക്ടോബർ 27 ന് സംഘടനാ രൂപം കൈവരിച്ചു. 2021 നവംബർ 1ന് ജസ്റ്റീസ്‌ ബി. കമാൽ പാഷ പ്രവർത്തനോദ്ഘാടനം നിർവ്വഹിച്ചു. പെൻഷൻകാരുടെ നിലനിൽപ്പിന് ആധാരമായ  മാസ്റ്റർ ട്രസ്റ്റ്‌ പുനരുജ്ജീവിപ്പിക്കുവാനുള്ള ക്രിയാത്മക പ്രവർത്തനങ്ങൾക്കും  സർക്കാർ മാതൃകയിലുള്ള ആരോഗ്യ - ക്ഷേമ പദ്ധതികൾ നേടിയെടുക്കുന്നതിനും മറ്റു വഴികളില്ലെന്ന തിരിച്ചറിവായിരുന്നു പ്രേരണ. ആസ്തിസമ്പാദനം, ആനുകൂല്യങ്ങളിൽ നിന്നുള്ള വിഹിത പിരിവുപോലുള്ള സാമ്പത്തിക ചൂഷണം, പരിധിയില്ലാത്ത ഭാരവാഹിത്വ തുടർച്ച എന്നിവ സംഘടനാ തത്വങ്ങൾക്ക് വിരുദ്ധമായിരിക്കും. കക്ഷി രാഷ്ട്രീയ കാറ്റഗറി വ്യത്യാസങ്ങൾക്ക് അതീതമായി സുതാര്യവും സംശുദ്ധവും ശക്തവുമായ പ്രവർത്തനമാണ് കൂട്ടായ്മയുടെ മുഖമുദ്ര.<br><br>
+
+                                        <b>നാൾവഴികൾ- നാഴികക്കല്ലുകൾ :</b><br>
+                                       * പെൻഷൻ കാർക്ക് ഐഡന്റിറ്റി കാർഡ്. <br>
+                                       * ഡിജിറ്റൽ ലൈഫ് സർട്ടിഫിക്കറ്റ്<br>
+                                       * മെഡിസെപ് അടുത്ത ഘട്ടത്തിൽ ബാധകമാക്കുന്ന കാര്യം പരിഗണനയിൽ.<br> 
+                                       * പെൻഷൻ ഫണ്ട്‌ - മാസ്റ്റർ ട്രസ്റ്റ്‌ വിഷയത്തിൽ നിയമപോരാട്ടത്തിനു തുടക്കം.<br>
+                                       *കൂട്ടായ്മയുടെ പരാതികളിൽ നാലുമാസത്തിനകം തീരുമാനമെടുക്കണമെന്ന്ഹൈക്കോടതി.<br>
+                                        </p>
+                                </div>
+                                <!-- <div class="inner-box">
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                            <div class="single-item">
+                                                <h3>Our Mission</h3>
+                                                <ul class="list-style-one clearfix">
+                                                    <li>Guiding Retirement Journeys</li>
+                                                    <li>Ensuring Financial Well-being</li>
+                                                    <li>Fostering Trust and Support</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                            <div class="single-item">
+                                                <h3>Our Vision</h3>
+                                                <ul class="list-style-one clearfix">
+                                                    <li>Empowering Retirement Confidence</li>
+                                                    <li>Personalized Financial Solutions</li>
+                                                    <li>Leading Retirement Excellence</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-section end -->
+
+
+
+        
+        {% endblock %}

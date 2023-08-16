@@ -1,0 +1,163 @@
+{% extends 'super_admin/super_admin_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<section class="body">
+    <!-- start: header -->
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>View Admins</h2>
+            <div class="right-wrapper text-end">
+
+                <a class="sidebar-right-toggle" ><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </header>
+					<div class="row justify-content-center justify-content-sm-between pt-2">
+						<div class="col-sm-auto text-center mb-4 mb-sm-0 mt-2 mt-sm-0">
+							<a href="{% url 'super_admin_add_admins' %}" class="ecommerce-sidebar-link btn btn-primary btn-md font-weight-semibold btn-py-2 px-4" data-ajax-url="ajax/ajax-products-form-empty.html">+ Add Admin</a>
+						</div>
+
+					</div>
+
+
+					
+					<!-- start: page -->
+					<div class="row" >
+						<div class="col">
+							<div class="card card-modern">
+								<div class="card-body"  >
+									<div class="datatables-header-footer-wrapper" ">
+										<div class="datatable-header">
+											<div class="row align-items-center mb-3">
+
+												<div class="col-4 col-lg-auto ps-lg-1 mb-3 mb-lg-0">
+
+												</div>
+												<div class="col-12 col-lg-auto ps-lg-1">
+													<div class="search search-style-1 search-style-1-lg mx-lg-auto">
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+                                        <div style="width:100%;overflow-x: auto;">
+                                            <table class="table table-ecommerce-simple table-borderless table-striped mb-0" id="datatable-ecommerce-list" style="width: 100%;">
+                                            <thead>
+                                                <tr>     
+                                                    <th width="20%">Image</th>
+                                                    <th width="20%">Name</th>
+                                                    <th width="15%">Email</th>
+													<th width="15%">Area</th>
+													<th width="15%">Position</th>
+													<th width="15%">Phone</th>
+                                                    <th width="2.5%"></th>
+                                        
+                                                </tr>
+                                            </thead>
+                                            <tbody style="height: 250px;">
+                                                {% for admin in admins %}
+                                                <tr>
+                                                    <td>                                                    
+														{% if admin.Admin_Picture %}
+														<a ><img src="{{admin.Admin_Picture.url}}" class="img-fluid" alt="News Image" /></a>
+														{% else %}
+														<a ><img src="{% static 'admin/img/admin.jpg' %}" class="img-fluid" alt="Product Short Name" /></a>
+														{% endif %}
+													</td>
+                                                    <td>{{admin.Admin_name}}</td>
+                                                    <td>{{admin.Admin_email}}</td>
+													<td>{{admin.Admin_Area}}</td>
+													<td>{{admin.Admin_position}}</td>
+													<td>{{admin.Admin_phone}}</td>
+
+                                                    <td>
+                                                        <ul class="notifications">
+
+                                                            <li>
+                                                                <a href="#" class="dropdown-toggle notification-icon" data-bs-toggle="dropdown">
+                                                                    <i class="bx bx-list-ul"></i>
+                                                                    <!-- <span class="badge">4</span> -->
+                                                                </a>
+                                                                <div class="dropdown-menu notification-menu">
+                                                                    <div class="notification-title" style="background-color:rgb(86, 86, 240);">
+                                                                        <!-- <span class="float-end badge badge-default">230</span> -->
+                                                                        Options
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="#" class="clearfix">
+                                                                                    <span class="title">View Details</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                        
+      
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+														<br>
+                                                        <ul class="notifications">
+
+                                                            <li>
+                                                                <a href="#" class="dropdown-toggle notification-icon" data-bs-toggle="dropdown">
+                                                                    <i class="bx bx-trash"></i>
+                                                                    <!-- <span class="badge">4</span> -->
+                                                                </a>
+                                                                <div class="dropdown-menu notification-menu">
+                                                                    <div class="notification-title" style="background-color: red;">
+                                                                        <!-- <span class="float-end badge badge-default">230</span> -->
+                                                                        This action is irreversible
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="" class="clearfix">
+                                                                                    <span class="title">Delete News</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                        
+      
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </td>
+
+
+                                                </tr>
+                                               {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                        <hr class="solid mt-5 opacity-4">
+                                        <div class="datatable-footer">
+                                            <div class="row align-items-center justify-content-between mt-3">
+
+                                                <div class="col-lg-auto text-center order-3 order-lg-2">
+                                                    <div class="results-info-wrapper"></div>
+                                                </div>
+                                                <div class="col-lg-auto order-2 order-lg-3 mb-3 mb-lg-0">
+                                                    <div class="pagination-wrapper"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</section>
+			</div>
+            {% endblock %}

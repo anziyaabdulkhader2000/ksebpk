@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<!-- Mirrored from azim.commonsupport.com/Optcare/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 May 2023 06:23:42 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>KSEB PSM</title>
+
+<!-- Fav Icon -->
+<link rel="icon" href="{% static 'assets/images/icons/logo(2).png' %}" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="{% static 'assets/css/font-awesome-all.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/owl.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/jquery.fancybox.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/color.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/elpath.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/jquery-ui.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet">
+
+
+<!-- ---------------------------------------------------------------------------------------------------------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ---------------------------------------------------------------------------------------------------------->
+
+
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+    {% if msg != "" %}
+    <div style="width: 50%;text-align: center;">
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>{{msg}}</strong>
+        </div>
+    </div>
+    {% endif %}
+    <div class="boxed_wrapper">
+
+        <!-- main header -->
+        <header class="main-header">
+
+            <!-- header-lower -->
+            <div class="header-lower">
+                <div class="auto-container">
+                    <div class="outer-box">
+                        <div style="width:8%;height:8%" class="logo-box">
+                            <figure class="logo"><img src="{% static 'assets/images/icons/logo(2).png' %}" alt=""></figure>
+                            <h5>{{user.User_name}}</h5>
+                        </div>
+                        
+
+                        <div class="menu-area clearfix">
+                            <!--Mobile Navigation Toggler-->
+                            <div class="mobile-nav-toggler">
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li><a href={% url 'user_home' %}>Home</a>
+                                        </li>
+                                        <li><a href="{% url 'user_all_news' %}">News</a></li> 
+                                        <li><a href="#">Settings</a></li>
+                                        <li>
+                                            <div class="btn-box">
+                                                <a href="{% url 'logout' %}" class="theme-btn btn-one">Logout</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div id="google_translate_element"></div>
+                <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                <script>
+                    function googleTranslateElementInit()
+                    {
+                        new google.translate.TranslateElement(
+
+                            {pageLanguage:'en',
+                            includedLanguages: 'hi,ml,en'},
+                            
+                            'google_translate_element'
+                        );
+
+                    }
+                </script>
+            </div>
+
+        </header>
+        <!-- main-header end -->
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><i class="fas fa-times"></i></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index-2.html"><img src="{% static 'assets/images/icons/logo(2).png' %}" alt="" title=""></a></div>
+                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>>
+            </nav>
+        </div><!-- End Mobile Menu -->
+
+
+        {% block content %}
+
+
+        {% endblock %}
+
+
+
+        <!-- main-footer -->
+        <br>
+        <footer class="main-footer p_relative">
+            <div class="footer-top">
+                <div class="auto-container">
+                    <div class="top-inner">
+                        <div class="footer-menu">
+                            <ul>
+                                <li>Management</li>
+                                <li>About Us</li>
+                                <li>Company</li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-logo">
+                            <br>
+                            <br>
+                            <div class="sec-title left p_relative d_block mb_25">
+                                <h2 style="color: yellow">Pension Management System</h2>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li>Career</li>
+                                <li>Location</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-section">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                            <div class="about-widget footer-widget mr_40">
+                                <div class="widget-title">
+                                    <h3>About</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <p>Providing exceptional pension solutions to empower retirees in Kerala and beyond. Your financial well-being is our priority.</p>
+                                    <ul class="social-links clearfix">
+                                        <li><i class="fab fa-facebook-f"></i></li>
+                                        <li><i class="fab fa-twitter"></i></li>
+                                        <li><i class="fab fa-vimeo-v"></i></li>
+                                        <li><i class="fab fa-google-plus-g"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="contact-widget footer-widget ml_50">
+                                <div class="widget-title">
+                                    <h3>Contacts</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="info clearfix">
+                                        <li>Flat 20, Medusa Tower, Thiruvananthapuram, Kerala</li>
+                                        <li>0468 2658956</li>
+                                        <li>pms@gmail.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom centred">
+                <div class="auto-container">
+                    <div class="copyright"><p><a href="#">Pension Management System</a> &copy; 2022 All Rights Reserved</p></div>
+                </div>
+            </div>
+        </footer>
+        
+
+
+
+        <!-- scroll to top -->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fal fa-long-arrow-up"></i>
+        </button>
+        
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.js' %}"></script>
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <script src="{% static 'assets/js/validation.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'assets/js/appear.js' %}"></script>
+    <script src="{% static 'assets/js/scrollbar.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+
+    <!-- map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
+    <script src="{% static 'assets/js/gmaps.js' %}"></script>
+    <script src="{% static 'assets/js/map-helper.js' %}"></script>
+
+    <!-- main-js -->
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+</body><!-- End of .page_wrapper -->
+
+<!-- Mirrored from azim.commonsupport.com/Retirement Management/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 May 2023 06:26:35 GMT -->
+</html>

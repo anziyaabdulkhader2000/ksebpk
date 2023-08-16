@@ -1,0 +1,157 @@
+{% extends 'super_admin/super_admin_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+<section class="body">
+    <!-- start: header -->
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>Users</h2>
+            <div class="right-wrapper text-end">
+
+                <a class="sidebar-right-toggle" ><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </header>
+
+					<!-- start: page -->
+					<div class="row" >
+						<div class="col">
+							<div class="card card-modern">
+								<div class="card-body"  >
+									<div class="datatables-header-footer-wrapper" ">
+										<div class="datatable-header">
+											<div class="row align-items-center mb-3">
+
+												<div class="col-4 col-lg-auto ps-lg-1 mb-3 mb-lg-0">
+
+												</div>
+												<div class="col-12 col-lg-auto ps-lg-1">
+													<div class="search search-style-1 search-style-1-lg mx-lg-auto">
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+                                        <div style="width:100%;overflow-x: auto;">
+                                            <table class="table table-ecommerce-simple table-borderless table-striped mb-0" id="datatable-ecommerce-list" style="width: 100%;">
+                                            <thead>
+                                                <tr>     
+                                                    <th width="20%">Customer Name</th>
+                                                    <th width="30%">Address</th>
+                                                    <th width="20%">Email id</th>
+                                                    <th width="20%">Phone</th>
+                                                    <th width="5%"></th>
+                                                    <th width="5%"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody style="height: 250px;">
+                                                {% for user in users %}
+                                                <tr>
+                                                    <td><strong style="color: black;">{{user.User_name}}</strong></td>
+                                                    <td>{{user.User_address}}</td>
+                                                    <td>{{user.User_email}}</td>
+                                                    <td><span>{{user.User_phone}}</span></td>
+
+                                                    <td>
+                                                        <ul class="notifications">
+
+                                                            <li>
+                                                                <a href="#" class="dropdown-toggle notification-icon" data-bs-toggle="dropdown">
+                                                                    <i class="bx bx-list-ul"></i>
+                                                                    <!-- <span class="badge">4</span> -->
+                                                                </a>
+                                                                <div class="dropdown-menu notification-menu">
+                                                                    <div class="notification-title" style="background-color:rgb(86, 86, 240);">
+                                                                        <!-- <span class="float-end badge badge-default">230</span> -->
+                                                                        Options
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="{% url 'super_admin_user' user.User_id %}" class="clearfix">
+                                                                                    <span class="title">View Details</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                        
+      
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </td>
+
+
+                                                    <td>
+                                                        
+
+                                                        <ul class="notifications">
+
+                                                            <li>
+                                                                <a href="#" class="dropdown-toggle notification-icon" data-bs-toggle="dropdown">
+                                                                    <i class="bx bx-trash"></i>
+                                                                    <!-- <span class="badge">4</span> -->
+                                                                </a>
+                                                                <div class="dropdown-menu notification-menu">
+                                                                    <div class="notification-title" style="background-color: red;">
+                                                                        <!-- <span class="float-end badge badge-default">230</span> -->
+                                                                        This action is irreversible
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <a href="" class="clearfix">
+                                                                                    <span class="title">Delete User</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                        </ul>
+                                                                        
+      
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </td>
+
+
+                                                </tr>
+                                               {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                        <hr class="solid mt-5 opacity-4">
+                                        <div class="datatable-footer">
+                                            <div class="row align-items-center justify-content-between mt-3">
+
+                                                <div class="col-lg-auto text-center order-3 order-lg-2">
+                                                    <div class="results-info-wrapper"></div>
+                                                </div>
+                                                <div class="col-lg-auto order-2 order-lg-3 mb-3 mb-lg-0">
+                                                    <div class="pagination-wrapper"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: page -->
+				</section>
+			</div>
+
+
+
+
+
+
+{% endblock %}

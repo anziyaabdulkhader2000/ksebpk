@@ -1,0 +1,143 @@
+{% extends 'admin/admin_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+<style>
+
+    .table_data {width:25%}
+
+</style>
+
+
+
+<section class="body">
+    <!-- start: header -->
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>Users</h2>
+            <div class="right-wrapper text-end">
+
+                <a class="sidebar-right-toggle" ><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </header>
+
+					<!-- start: page -->
+					<div class="row" >
+						<div class="col">
+							<div class="card card-modern">
+								<div class="card-body"  >
+									<div class="datatables-header-footer-wrapper" ">
+										<div class="datatable-header">
+											<div class="row align-items-center mb-3">
+
+												<div class="col-4 col-lg-auto ps-lg-1 mb-3 mb-lg-0">
+
+												</div>
+												<div class="col-12 col-lg-auto ps-lg-1">
+													<div class="search search-style-1 search-style-1-lg mx-lg-auto">
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+                                        <div style="width:100%;overflow-x: auto;">
+                                            <table class="table table-ecommerce-simple table-borderless table-striped mb-0" id="datatable-ecommerce-list" style="width: 100%;">
+                                            
+
+
+                                            <tbody style="height: 250px;">
+                                                <tr>     
+                                                    <td class = "table_data"><strong>Customer Name : </strong></td>
+                                                    <td class = "table_data">{{user.User_name}}</td>
+                                                    <td class = "table_data"><strong>Email id : </strong></td>
+                                                    <td class = "table_data">{{user.User_email}}</td>
+                                                </tr>
+                                                <tr>     
+                                                    <td class = "table_data"><strong>Address : </strong></td>
+                                                    <td class = "table_data">{{user.User_address}}</td>
+                                                    <td class = "table_data"><strong>Pension Receiving ARU : </strong></td>
+                                                    <td class = "table_data">{{user.User_ARU}}</td>
+                                                </tr>
+                                                <tr>     
+                                                    <td class = "table_data"><strong>Date of Birth : </strong></td>
+                                                    <td class = "table_data">{{user.User_birth}}</td>
+                                                    <td class = "table_data"><strong>Age  : </strong></td>
+                                                    <td class = "table_data">{{user.User_age}}</td>
+                                                </tr>
+                                                <tr>     
+                                                    <td class = "table_data"><strong>Date of Join : </strong></td>
+                                                    <td class = "table_data">{{user.User_join}}</td>
+                                                    <td class = "table_data"><strong>Date of Retire : </strong></td>
+                                                    <td class = "table_data">{{user.User_retire}}</td>
+                                                </tr>
+                                                <tr>     
+                                                    <td class = "table_data"><strong>Contact Number: </strong></td>
+                                                    <td class = "table_data">{{user.User_phone}}</td>
+                                                    <td class = "table_data"><strong>Retired Possition: </strong></td>
+                                                    <td class = "table_data">{{user.User_position}}</td>
+                                                </tr>
+                                                <tr>     
+
+                                                    <td class = "table_data"><strong>Status: </strong></td>
+
+                                                    {% if user.User_Sub is not None %}
+                                                    <td style="color:rgb(62, 62, 232)"><strong>Subscribed</strong></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="color:rgb(62, 62, 232);width:50%"><strong>* User Subscribtion ends on <font color="red"> &nbsp; {{user.User_Sub.Sub_end}}</font> </strong></td>
+    
+                                                    </tr>
+
+                                                    </tbody>
+                                            </table>
+
+                                                    {% else %}
+                                                    <td style="color:red"><strong>Not Subscribed</strong></td>
+                                                    
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                        <div  class="col-sm-auto text-center mb-4 mb-sm-0 mt-2 mt-sm-0">
+                                            <br>
+                                            <p style="color:rgb(62, 62, 232);text-align: center;"><strong>*Check and varify the details provided by user. If details are valid then open Payment Gateway</strong></p>
+                                            <a style="background-color:green;" href="{% url 'payment_gateway' user.User_email %}" class="ecommerce-sidebar-link btn btn-primary btn-md font-weight-semibold btn-py-2 px-4" data-ajax-url="ajax/ajax-products-form-empty.html">Open Payment Gateway</a>
+                                        </div>
+
+                                        {% endif %}
+
+                                        </div>
+                                        <hr class="solid mt-5 opacity-4">
+                                        <div class="datatable-footer">
+                                            <div class="row align-items-center justify-content-between mt-3">
+
+                                                <div class="col-lg-auto text-center order-3 order-lg-2">
+                                                    <div class="results-info-wrapper"></div>
+                                                </div>
+                                                <div class="col-lg-auto order-2 order-lg-3 mb-3 mb-lg-0">
+                                                    <div class="pagination-wrapper"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: page -->
+				</section>
+			</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'common_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+        <!-- contact-section -->
+        <section class="contact-section p_relative">
+            <div style="height:20%" class="bg-layer"></div>
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(static/assets/images/shape/shape-7.png);"></div>
+                <div class="pattern-2" style="background-image: url(static/assets/images/shape/shape-8.png);"></div>
+            </div>
+            <div  class="auto-container">
+                <div  class="sec-title centred light mb_45">
+                    <span class="sub-title">JOIN US</span>
+                    <h2 style="margin-top:0.25%" >Register With Your Details <br /></h2>
+                </div>
+                <div class="support-box p_relative centred">
+                    <div class="icon-box"><img src="{% static 'assets/images/icons/icon.png' %}" alt=""></div>
+                </div>
+            <div class = "contact-style-two p_relative">
+                <div class="row clearfix">
+                    <div style="position: relative; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/assets/images/icons/evening_walk.jpg'); background-size: cover; margin-top:2%" class="form-inner">
+                        <img src="{% static 'assets/images/icons/icon.png' %}" alt="Icon" class="top-left-icon"> <h3 class="white-bold-text">കെ.എസ്.ഇ.ബി പെൻഷനേഴ്സ് കൂട്ടായ്മ <br>പെൻഷൻ സുരക്ഷയ്ക്കും സാമൂഹിക ക്ഷേമത്തിനുമായി ഒരു സുതാര്യ വേദി<span><br><h6></h3><h6 style="color:white" > ഓഫീസ്‌, KP 13/647 ആലപ്പുഴ 688 525, Regn. No. ALP/TC/335/2021<br></span>Admn. ഓഫീസ്‌; കൃഷ്ണ നിവാസ്‌. TC-82/4275,<br> മള്ളൂര്‍ റോഡ്‌, വഞ്ചിയൂര്‍, തിരുവനന്തപുരം - 695 035<br>ഫോണ്‍ നമ്പര്‍; 8547094633, 9447135755, 7907921297</h6>
+                        <form method="post" action="" id="contact-form">
+                        <form method="post" action="" id="contact-form"></h3>
+                            {% csrf_token %}
+                            <div class="row clearfix">
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input style="color:white" type="text" name="name" placeholder="അപേക്ഷകന്റെ പേര്‍" required="">
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input style="color:white" type="email" name="email" placeholder="ഇമെയിൽ ഐഡി" required="">
+                                </div>
+                                <div style="color:white" class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                    <textarea style="color:white" name="address" placeholder="സ്ഥിരവിലാസം" required=""></textarea>
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input style="color:white" type="text" name="ARU" required="" placeholder="പെന്‍ഷന്‍ കൈപ്പറ്റുന്ന ARU/ഓഫീസ്‌ ജില്ല">
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <input style="color:white" type="text" name="nomin_name" required="" placeholder="നോമിനിയുടെ പേര്">
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <label style="color:white" >ജോലിയിൽ പ്രേവേശിച്ച തിയ്യതി</label>
+                                    <input style="color:white" type="text" name="join_date" required placeholder="Type: ddmmyyyy" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^(\d{2})(\d{2})?(\d{4})?$/, (match, p1, p2, p3) => p1 + (p2 ? '/' + p2 : '') + (p3 ? '/' + p3 : ''));" >
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <label style="color:white">വിരമിച്ച തിയ്യതി</label>
+                                    <input style="color:white" type="text" name="retire_date" required placeholder="Type: ddmmyyyy" maxlength="10"  oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^(\d{2})(\d{2})?(\d{4})?$/, (match, p1, p2, p3) => p1 + (p2 ? '/' + p2 : '') + (p3 ? '/' + p3 : ''));">
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <label style="color:white">Birth Date</label>
+                                    <input style="color:white" type="text" name="birth_date" required placeholder="Type: ddmmyyyy" maxlength="10"  oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^(\d{2})(\d{2})?(\d{4})?$/, (match, p1, p2, p3) => p1 + (p2 ? '/' + p2 : '') + (p3 ? '/' + p3 : ''));">
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <label style="color:white">Retired Post</label>
+                                    <input style="color:white" type="text" name="retired_post" required="" placeholder="Your Post When Retired">
+                                </div>
+                                <div style="color:white" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                    <label style="color:white">Contact Number</label>
+                                    <input style="color:white" type="text" maxlength="10" name="phone" required="" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="10 Digit Phone Number">
+                                </div>
+                        
+                                <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0 centred">
+                                    <button class="theme-btn btn-one" type="submit" name="submit-form">Submit Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- contact-section end -->
+
+
+
+
+
+{% endblock %}

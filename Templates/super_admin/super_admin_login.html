@@ -1,0 +1,130 @@
+<!doctype html><html class="fixed">
+	
+<!-- Mirrored from www.okler.net/previews/porto-admin/4.1.0/layouts-default.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 May 2023 05:41:55 GMT -->
+<head>
+
+    {% if msg != "" %}
+    <script>alert("{{msg}}")</script>
+    {% endif %}
+
+	{% load static %}
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+		<title>Super Admin | PMS</title>
+		<meta name="keywords" content="HTML5 Admin Template" />
+		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
+		<meta name="author" content="okler.net">
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!-- Web Fonts  -->		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{% static 'admin/vendor/bootstrap/css/bootstrap.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/animate/animate.compat.css' %}">		<link rel="stylesheet" href="{% static 'admin/vendor/font-awesome/css/all.min.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/boxicons/css/boxicons.min.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/magnific-popup/magnific-popup.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css' %}" />
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="{% static 'admin/vendor/jquery-ui/jquery-ui.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/jquery-ui/jquery-ui.theme.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css' %}" />		<link rel="stylesheet" href="{% static 'admin/vendor/morris/morris.css' %}" />
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{% static 'admin/css/theme.css' %}" />
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{% static 'admin/css/custom.css' %}">
+		<!-- Head Libs -->
+		<script src="{% static 'admin/vendor/modernizr/modernizr.js' %}"></script>
+		<script src="master/style-switcher/style.switcher.localstorage.js' %}"></script>
+		
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<div id="google_translate_element"></div>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+	</head>
+<style>
+	.theme-btn {
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 16px;
+		border: none;
+		border-radius: 5px;
+		background-color: #3498db;
+		color: #fff;
+		cursor: pointer;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	  }
+	  
+	  .theme-btn:hover {
+		background-color: #2980b9;
+	  }
+</style>
+
+
+{% load static %}
+<div style="position:relative; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/assets/images/icons/super_admin_bg.jpg'); background-size:cover;background-position: center center" class="form-inner">
+		<section class="body">
+
+            <br>
+            <br>
+            <div style="text-align:center;color:hsl(74, 100%, 50%);"><h2>Super Admin Login</h2></div>
+            <br>
+            <br>
+            
+            <form class="ecommerce-form action-buttons-fixed" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="col">
+
+                    <div  class="form-group row align-items-center pb-3">
+                        <label style="color:white" class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Email</label>
+                        <div class="col-lg-7 col-xl-6">
+                            <input style="color:white;background: transparent;" type="email" class="form-control form-control-modern" name="email" required />
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center pb-3">
+                        <label style="color:white" class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Password</label>
+                        <div class="col-lg-7 col-xl-6">
+                            <input style="color:white;background: transparent" maxlength="8" type="password" class="form-control form-control-modern" name="password" required />
+                        </div>
+                    </div>
+                    <div class="form-group message-btn">
+						<div style="text-align: center;">
+							<button type="submit" class="theme-btn btn-two">LOGIN</button>
+						  </div>						  
+                    </div>
+                </div>
+            </form>
+            </div>
+
+        </div>
+
+            
+		<!-- Vendor -->
+		<script src="{% static 'admin/vendor/jquery/jquery.js' %}"></script>		<script src="{% static 'admin/vendor/jquery-browser-mobile/jquery.browser.mobile.js' %}"></script>		<script src="{% static 'admin/vendor/jquery-cookie/jquery.cookie.js' %}"></script>		<script src="master/style-switcher/style.switcher.js' %}"></script>		<script src="{% static 'admin/vendor/popper/umd/popper.min.js' %}"></script>		<script src="{% static 'admin/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>		<script src="{% static 'admin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js' %}"></script>		<script src="{% static 'admin/vendor/common/common.js' %}"></script>		<script src="{% static 'admin/vendor/nanoscroller/nanoscroller.js' %}"></script>		<script src="{% static 'admin/vendor/magnific-popup/jquery.magnific-popup.js' %}"></script>		<script src="{% static 'admin/vendor/jquery-placeholder/jquery.placeholder.js' %}"></script>
+		<!-- Specific Page Vendor -->
+		<script src="{% static 'admin/vendor/jquery-ui/jquery-ui.js' %}"></script>		<script src="{% static 'admin/vendor/jqueryui-touch-punch/jquery.ui.touch-punch.js' %}"></script>		<script src="{% static 'admin/vendor/jquery-appear/jquery.appear.js' %}"></script>		<script src="{% static 'admin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js' %}"></script>		<script src="{% static 'admin/vendor/jquery.easy-pie-chart/jquery.easypiechart.js' %}"></script>		<script src="{% static 'admin/vendor/flot/jquery.flot.js' %}"></script>		<script src="{% static 'admin/vendor/flot.tooltip/jquery.flot.tooltip.js' %}"></script>		<script src="{% static 'admin/vendor/flot/jquery.flot.pie.js' %}"></script>		<script src="{% static 'admin/vendor/flot/jquery.flot.categories.js' %}"></script>		<script src="{% static 'admin/vendor/flot/jquery.flot.resize.js' %}"></script>		<script src="{% static 'admin/vendor/jquery-sparkline/jquery.sparkline.js' %}"></script>		<script src="{% static 'admin/vendor/raphael/raphael.js' %}"></script>		<script src="{% static 'admin/vendor/morris/morris.js' %}"></script>		<script src="{% static 'admin/vendor/gauge/gauge.js' %}"></script>		<script src="{% static 'admin/vendor/snap.svg/snap.svg.js' %}"></script>		<script src="{% static 'admin/vendor/liquid-meter/liquid.meter.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/jquery.vmap.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/data/jquery.vmap.sampledata.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/jquery.vmap.world.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/continents/jquery.vmap.africa.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/continents/jquery.vmap.asia.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/continents/jquery.vmap.australia.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/continents/jquery.vmap.europe.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js' %}"></script>		<script src="{% static 'admin/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js' %}"></script>
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'admin/js/theme.js' %}"></script>
+		<!-- Theme Custom -->
+		<script src="{% static 'admin/js/custom.js' %}"></script>
+		<!-- Theme Initialization Files -->
+		<script src="{% static 'admin/js/theme.init.js' %}"></script>
+		<!-- Analytics to Track Preview Website -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','../../../../www.google-analytics.com/analytics.js' %}','ga');
+		  ga('create', 'UA-42715764-8', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		<!-- Examples -->
+		<script src="{% static 'admin/js/examples/examples.dashboard.js' %}"></script>
+	</body>
+
+<!-- Mirrored from www.okler.net/previews/porto-admin/4.1.0/layouts-default.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 May 2023 05:42:03 GMT -->
+</html>

@@ -1,0 +1,46 @@
+
+{% extends 'user/user_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+
+        <!-- news-section -->
+        <section class="news-section p_relative">
+            <div class="auto-container">
+                <div class="three-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+
+                    {% for news in newses %}
+                    <div class="news-block-one">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="{{news.News_Picture.url}}" alt="">
+                            </figure>
+                            <div class="lower-content">
+                                <div class="inner">
+                                    <div class="category"><a style="color:black">{{news.News_title}}</a></div>
+                                    <h3><a>News description</a></h3>
+                                    <ul class="post-info clearfix">
+                                        <li><i class="icon-34"></i>{{news.News_date}}</li>
+                                        <li><i class="icon-35"></i><a href="#">Admin_name</a></li>
+                                    </ul>
+                                    <p>{{ news.News_content|slice:":100" }}...</p>
+                                    <div class="link"><a href="{% url 'user_news' news.News_id %}">Read more</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+
+                </div>
+            </div>
+        </section>
+        <!-- news-section end -->
+
+
+
+
+{% endblock %}

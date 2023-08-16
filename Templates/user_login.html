@@ -1,0 +1,46 @@
+{% extends 'common_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+    
+
+        <!-- contact-section -->
+        <section class="contact-section p_relative">
+            <div class="bg-layer"  style="height: 50%;"></div>
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(static/assets/images/shape/shape-7.png);"></div>
+                <div class="pattern-2" style="background-image: url(static/assets/images/shape/shape-8.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred light mb_45">
+                    <span class="sub-title">LOGIN</span>
+                    <h2 style="margin-top:0.25%" >Provide Valid Details <br /></h2>
+                </div>
+                <div class="support-box p_relative centred">
+                    <div class="icon-box"><img src="{% static 'assets/images/icons/icon.png' %}" alt=""></div>
+                </div>
+                <div class="form-inner">
+                    <form action="" method="post" class="default-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Password" maxlength="8" id="password_style" required>
+                        </div>
+
+                        <div class="form-group message-btn">
+                            <center><button  type="submit" style="  width: auto;" class="theme-btn btn-two">LOGIN</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- contact-section end -->
+
+
+
+{% endblock %}

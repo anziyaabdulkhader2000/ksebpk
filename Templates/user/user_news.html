@@ -1,0 +1,70 @@
+{% extends 'user/user_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+
+
+
+        <!-- sidebar-page-container -->
+        <section class="sidebar-page-container p_relative">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                            <div class="news-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img src="{{news.News_Picture.url}}" alt="">
+                                    </figure>
+                                    <div class="lower-content">
+                                        <div class="inner">
+                                            <h3>{{news.News_title}}</h3>
+                                            <ul class="post-info clearfix">
+                                                <li><i class="icon-34"></i>{{news.News_date}}</li>
+                                                <li><i class="icon-35"></i><a href="#">Admin name</a></li>
+                                            </ul>
+                                            <p>{{news.News_content}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="blog-sidebar ml_40">
+
+                            <div class="sidebar-widget post-widget">
+                                <div class="post-inner">
+                                    <div class="post">
+                                        <h4><a>Latest News</a></h4>
+                                    </div>
+                                </div>
+                                <div class="post-inner">
+                                    {% for latest in latest_news %}
+                                    <div class="post">
+                                        {% if latest.News_Picture %}
+                                        <figure><img src="{{latest.News_Picture.url}}" alt=""></figure>
+                                        {% else %}
+                                        <figure class="post-thumb"><a><img src="static/assets/images/icons/kerala_Flag.jpg" alt=""></a></figure>
+                                        {% endif %}
+                                        <h4><a href="{% url 'user_news' latest.News_id %}">{{latest.News_title|slice:":45" }}...</a></h4>
+                                        <span class="post-date"><i class="icon-34"></i>{{latest.News_date}}</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sidebar-page-container end -->
+
+
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'common_head.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+    
+
+        <!-- contact-section -->
+        <section class="contact-section p_relative">
+            <div class="bg-layer"  style="height: 30%;"></div>
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(static/assets/images/shape/shape-7.png);"></div>
+                <div class="pattern-2" style="background-image: url(static/assets/images/shape/shape-8.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred light mb_45">
+                    <span class="sub-title">SUBSCRIBE</span>
+                    <h2 style="margin-top:0.25%" > Subscribe to activate your account<br /></h2>
+                </div>
+                <div class="support-box p_relative centred">
+                    <div class="icon-box"><img src="{% static 'assets/images/icons/icon.png' %}" alt=""></div>
+                </div>
+                <div class="form-inner">
+                    <form action="subscribe" method="post" class="default-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label style="font-size:20px">Hello {{user.User_name}}</label>
+                            <br>
+                            <label style="font-size:20px">You can subscribe for a duration of one year for the affordable price of <strong style="color:rgb(63, 57, 57);font-size: 30px;">₹300</strong></label>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount to be paid</label>
+                            <input type="text" maxlength="12" readonly value="₹300">
+                            <input type="text" name="user_id"  hidden value="{{user.User_id}}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" maxlength="12" name="cardNumber" required="" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="12 digit CARD NUMBER">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" maxlength="3" name="cardCVV" required="" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="3 digit CVV">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" maxlength="6" name="cardPIN" required="" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="6 digit PIN">
+                        </div>
+                        <div class="form-group">
+                            <label>Check your mail for Transaction ID</label>
+                            <input type="text" maxlength="14" name="transaction_id" required="" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="12 digit Transaction ID">
+                        </div>
+
+                        <div class="form-group message-btn">
+                            <center><button  type="submit" style="  width: auto;" class="theme-btn btn-two">PAY & SUBSCRIBE</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- contact-section end -->
+
+
+
+{% endblock %}
